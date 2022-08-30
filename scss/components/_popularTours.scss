@@ -1,0 +1,142 @@
+.popular-tours {
+    padding: 5rem 0 10rem 0;
+}
+
+.popular-tours-heading {
+    font-size: 8rem;
+    text-align: center;
+    margin-bottom: 8rem;
+    color: $color-primary;
+    text-shadow: 0 0.1rem 0.2rem $color-primary;
+
+    @media (max-width: 1000px) {
+        font-size: 6rem;
+    }
+
+    @media (max-width: 800px) {
+        font-size: 5rem;
+    }
+}
+
+.cards-wrapper {
+    display: flex;
+    justify-content: space-evenly;
+
+    @media (max-width: 1200px) {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.card {
+    width: 35rem;
+    position: relative;
+    perspective: 150rem;
+
+    @media (max-width: 1200px) {
+       margin: 3rem 0;
+    }
+}
+
+.card-image {
+    width: 100%;
+    border-radius: 0.3rem 0.3rem 0 0 ;
+}
+
+.front-side {
+    text-align: center;
+    background-color: $color-white;
+    border-radius: 0.3rem;
+    position: relative;
+    z-index: 10;
+    opacity: 0.9;
+    transition: opacity 0.4s, transform 0.4s, box-shadow 0.4s;
+}
+
+.change > .front-side {
+    transform: translateZ(-5rem) translateX(3rem);
+    box-shadow: 0 2rem 4rem #777;
+    opacity: 0.5;
+    z-index: 0;
+}
+
+.tour-name {
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    position:absolute;
+    top:30%;
+    right:1.5rem;
+    color:$color-white;
+    text-shadow: 0 0 1rem #000;
+}
+
+.card-list {
+    width: 80%;
+    margin:auto;
+    padding:2rem 0 3rem 0;
+}
+
+.card-list-item {
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: $color-light-grey;
+    margin: 2rem 0;
+    border-bottom: .1rem solid $color-primary;
+    padding-bottom: 1.5rem;
+}
+
+.back-side {
+    position: absolute;
+    top:0;
+    background-color: $color-primary;
+    width: 100%;
+    height: 100%;
+    border-radius: 0.3rem;
+    box-shadow: 0 2rem 4rem #777;
+    @include flexLayout;
+    flex-direction: column;
+    transform: translateZ(-5rem) translateX(3rem);
+    opacity: 0.5;
+    transition: opacity 0.4s, transform 0.4s, box-shadow 0.4s;
+}
+
+.change > .back-side {
+    transform: translateZ(0) translateX(0);
+    box-shadow: 0 0.5rem 2rem #aaa;
+    opacity: 0.9;
+}
+
+.tour-price {
+    font-size: 5rem;
+    font-weight: 300;
+    color:$color-white;
+    margin-bottom: 3rem;
+}
+
+.card-button {
+    color:$color-primary;
+    background-color: $color-white;
+    border: none;
+    font-size: 2.5rem;
+    padding:1rem 2rem;
+    letter-spacing: 0.2rem;
+    border-radius: 5rem;
+    cursor: pointer;
+
+}
+
+.navigation-button {
+    position: absolute;
+    top: 0.5rem;
+    left: 0.5rem;
+    padding: 0.5rem;
+    background-color: rgba(255,255,255,0.8);
+    border-radius: 0.3rem;
+    border:none;
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    cursor: pointer;
+}   

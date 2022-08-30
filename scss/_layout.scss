@@ -1,0 +1,10 @@
+.container {
+    background-color: $color-secondary;
+    margin: 3.5rem;
+    box-shadow: 0 1rem 3rem $color-grey;
+    overflow: hidden;
+
+    @media (max-width: 650px) {
+        margin: 0;
+    }
+}

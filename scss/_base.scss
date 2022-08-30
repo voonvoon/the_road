@@ -1,0 +1,30 @@
+$color-primary: #2b81e4;
+$color-secondary: #eee;
+$color-white: #fff;
+$color-grey: #555;
+$color-light-grey: #777;
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Vollkorn', serif;
+    list-style-type: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    outline: none;
+}
+
+html {
+    font-size: 62.5%;
+
+    @media (max-width: 500px) {
+        font-size: 45%;
+    }
+}
+
+@mixin flexLayout {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
